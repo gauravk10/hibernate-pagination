@@ -1,0 +1,23 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<listener>
+		<listener-class>com.nit.listener.SessionFactoryListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>MainControllerServlet</servlet-name>
+		<display-name>MainControllerServlet</display-name>
+		<description></description>
+		<servlet-class>com.nit.controller.MainControllerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MainControllerServlet</servlet-name>
+		<url-pattern>/controller</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

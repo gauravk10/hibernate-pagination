@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	
+		<!-- hibernate properties -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		
+		<!-- server managed connection pool cfg -->
+		<property name="connection.provider_class">org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl</property>
+		<property name="connection.datasource">java:/comp/env/DsJndi</property>
+		
+		<!-- enable contextual session -->
+		<property name="current_session_context_class">thread</property>
+		
+		<!-- mapping domain class -->
+		<mapping class="com.nit.entity.Employee" />
+		
+	</session-factory>
+</hibernate-configuration>
